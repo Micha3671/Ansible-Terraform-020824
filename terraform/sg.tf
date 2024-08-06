@@ -1,5 +1,5 @@
 resource "aws_security_group" "main_vpc_sg" {
-  vpc_id = "vpc-071efab273c20de8a"  # Ersetze dies durch die tatsächliche VPC-ID
+  vpc_id = "vpc-074864fbfaa76616f" # Ersetze dies durch die tatsächliche VPC-ID
 
   ingress {
     from_port   = 80
@@ -8,11 +8,11 @@ resource "aws_security_group" "main_vpc_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-   ingress {
+  ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Erlaubt Verbindungen von überall
+    cidr_blocks = ["0.0.0.0/0"] # Erlaubt Verbindungen von überall
   }
 
   egress {
